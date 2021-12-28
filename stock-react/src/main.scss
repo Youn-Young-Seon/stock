@@ -11,10 +11,38 @@ $light-gray: #D9D4D2;
     
     .row{
         margin: 0;
-    }    
+    }
 
-    .main-fontColor{
+    .main-topBar{
+        margin: 12px;
+    }
+
+    .main-fontColor--light{
         color: $light-gray;
+    }
+    
+    .main-fontColor--blueGreen{
+        color: $dark-blueGreen;
+    }
+
+    .main-title{
+        display: flex;
+    }
+
+    .main-title ul{        
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-title li{
+        display: inline-block;
+        padding: 0 12px;
+    }
+
+    .main-title li:hover{
+        cursor: pointer;
     }
 
     .main-box{
