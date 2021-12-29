@@ -42,16 +42,20 @@ body{
         color: $dark-blueGreen;
     }
 
-    .main-box{
+    .main-box-row{
+        display: flex;
+    }
+
+    .main-box-col{
         width: 100%;
         height: 200px;    
-        margin: 12px auto;    
+        margin: 2px;    
         background-color: $light-indigo;        
     }
 
-    .row{
-        margin: 0;
-    }
+    // .row{
+    //     margin: 0;
+    // }
 
     .header{
         width: 100%;
@@ -63,23 +67,23 @@ body{
     }
 
     
-    .header-title{
+    .main-title{
         display: flex;
     }
 
-    .header-title ul{        
+    .main-title ul{        
         list-style: none;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .header-title li{
+    .main-title li{
         display: inline-block;
         padding: 0 12px;
     }
 
-    .header-title li:hover{
+    .main-title li:hover{
         cursor: pointer;
     }
 

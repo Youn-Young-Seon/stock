@@ -33,12 +33,11 @@ function App() {
       <>
         {
           card.map((a) => {
-            return <div className="col-4">
-                    <div className="main-box"></div>
-                    <div className="main-box"></div>
-                    <div className="main-box"></div>
-                    <div className="main-box"></div>
-                    <div className="main-box"></div>
+            return <div className='main-box-row'>
+                    <div className="main-box-col"></div>
+                    <div className="main-box-col"></div>
+                    <div className="main-box-col"></div>
+                    <div className="main-box-col"></div>                    
                   </div>;
           })
         }
@@ -67,14 +66,14 @@ function App() {
             <div className="section-left">
               <div className='section-left-top'>
                 <div className='section-left-top-container'>
-                  <div className="row">
-                    <div className='header-title main-fontColor--light'>
+                  {/* <div className="row"> */}
+                    <div className='main-title main-fontColor--light'>
                       <h6>Live Rates</h6>
                       <ActiveStyle/>
                     </div>
                     <StockCard/>
                     </div>
-                  </div>
+                  {/* </div> */}
                 </div>
               <div className='section-left-bottom'>
                 <div className="section-left-bottom-container main-fontColor--light">
@@ -92,6 +91,20 @@ function App() {
                   </div>
                   <div className='section-left-bottom-container-table'>
                     <table>
+                      <tr>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>                                            
+                      </tr>
+                      <tr>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>                                            
+                      </tr>
                       <tr>
                         <td>td</td>
                         <td>td</td>
