@@ -4,17 +4,34 @@ $dark-blueGreen: #4D6873;
 $light-blueGreen: #72878C;
 $light-gray: #D9D4D2;
 
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@mixin mainScrollBar {
+    // ::-webkit-scrollbar : 스크롤바 전체
+    width: 6px;
+    background-color: $dark-indigo;
+}
+@mixin mainScrollBarThumb() {
+    // ::-webkit-scrollbar-thumb : 스크롤 막대
+    background-color: $dark-blueGreen;
+    border-radius: 3px;
+}
+@mixin mainScrollBarTrack {
+    // ::-webkit-scrollbar-track : 스크롤 막대 외부
+    background-color: $dark-indigo;
+}
+
 #main-bg{
     width: 100%;
     height: 100%;  
-    background-color: $dark-indigo;    
-    
-    .row{
-        margin: 0;
-    }
+    background-color: $dark-indigo;
 
-    .main-topBar{
-        margin: 12px;
+    a{
+        text-decoration: none;
     }
 
     .main-fontColor--light{
@@ -25,30 +42,162 @@ $light-gray: #D9D4D2;
         color: $dark-blueGreen;
     }
 
-    .main-title{
-        display: flex;
-    }
-
-    .main-title ul{        
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .main-title li{
-        display: inline-block;
-        padding: 0 12px;
-    }
-
-    .main-title li:hover{
-        cursor: pointer;
-    }
-
     .main-box{
         width: 100%;
         height: 200px;    
         margin: 12px auto;    
         background-color: $light-indigo;        
     }
+
+    .row{
+        margin: 0;
+    }
+
+    .header{
+        width: 100%;
+        height: 10vh;
+    }
+
+    .header-topBar{
+        margin: 12px;
+    }
+
+    
+    .header-title{
+        display: flex;
+    }
+
+    .header-title ul{        
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-title li{
+        display: inline-block;
+        padding: 0 12px;
+    }
+
+    .header-title li:hover{
+        cursor: pointer;
+    }
+
+    .active{
+        color: $light-gray;
+    }
+
+
+
+    .section{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .section-left{
+        width: 75%;                
+    }
+    
+    .section-left-top{        
+        width: 100%;        
+        height: 60vh;
+        padding: 8px;
+    }
+    
+    .section-left-top-container{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;    
+    }
+    .section-left-top-container::-webkit-scrollbar{
+        @include mainScrollBar();
+    }
+    .section-left-top-container::-webkit-scrollbar-thumb{
+        @include mainScrollBarThumb();
+    }
+    .section-left-top-container::-webkit-scrollbar-track{
+        @include mainScrollBarTrack();
+    }
+
+
+    .section-left-bottom{        
+        width: 100%;
+        height: 25vh;
+        padding: 8px;
+    }
+    
+    .section-left-bottom-container{        
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .section-left-bottom-container-title{        
+        background-color: $light-indigo;
+        border: 2px solid $light-indigo;
+        border-radius: 4px;
+    }
+
+    .section-left-bottom-container-title table{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .section-left-bottom-container-table{        
+        width: 100%;
+        height: 50%;
+        overflow-y: scroll;
+    }
+    .section-left-bottom-container-table::-webkit-scrollbar{
+        @include mainScrollBar();
+    }
+    .section-left-bottom-container-table::-webkit-scrollbar-thumb{
+        @include mainScrollBarThumb();
+    }
+    .section-left-bottom-container-table::-webkit-scrollbar-track{
+        @include mainScrollBarTrack();
+    }
+
+    .section-left-bottom-container-table table{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .section-right{
+        width: 25%;        
+        height: 85vh;
+    }
+
+    .section-right-container{
+        overflow-y: scroll;
+        width: 100%;
+        height: 100%;
+        background-color: $light-indigo;
+    }
+    .section-right-container::-webkit-scrollbar{
+        @include mainScrollBar();
+    }
+    .section-right-container::-webkit-scrollbar-thumb{
+        @include mainScrollBarThumb();
+    }
+    .section-right-container::-webkit-scrollbar-track{
+        @include mainScrollBarTrack();
+    }
+
+
+
+    .footer{
+        width: 100%;
+        height: 5vh;
+        padding: 8px;
+    }
+
+    .footer-container{
+        width: 100%;
+        height: 100%;
+        background-color: $light-indigo;
+    }
+
 }
