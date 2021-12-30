@@ -12,15 +12,17 @@ body{
 
 @mixin mainScrollBar {
     // ::-webkit-scrollbar : 스크롤바 전체
-    width: 6px;
+    width: 8px;
     background-color: $dark-indigo;
 }
 @mixin mainScrollBarThumb() {
     // ::-webkit-scrollbar-thumb : 스크롤 막대
     background-color: $dark-blueGreen;
     border-radius: 3px;
+    background-clip: padding-box;
+    border: 1px solid transparent;
 }
-@mixin mainScrollBarTrack {
+@mixin mainScrollBarTrack {    
     // ::-webkit-scrollbar-track : 스크롤 막대 외부
     background-color: $dark-indigo;
 }
@@ -172,6 +174,12 @@ body{
     .section-right{
         width: 25%;        
         height: 85vh;
+        padding: 8px 8px 8px 0;
+        overflow: hidden;
+    }
+
+    .section-right-title{
+        margin-bottom: 1rem;
     }
 
     .section-right-container{
